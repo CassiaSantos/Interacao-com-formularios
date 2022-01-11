@@ -1,0 +1,141 @@
+<!-- DEV: CÁSSIA OLIVEIRA DOS SANTOS
+	 TURMA: INFO19
+	 PROFESSOR: KLEBERSON JUNIO DO AMARAL SERIQUE -->
+
+<!DOCTYPE html><!-- -->
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interação com formulários</title>
+    </head>
+   
+    <body bgcolor="#5BE7A9"> <!-- 81F5FF-->
+        <!--Codifique um formulário HTML para coletar o nome de um cliente e algumas informações pessoais como: sexo, estado civil e endereço (rua, número, complemento, CEP, cidade, UF). Utilize todos os elementos HTML visto na aula.-->
+        
+        <!--sexo, estado civil e endereço (rua, número, complemento, CEP, cidade, UF).-->
+        <form action="" name="Cadastro de Clientes DEVs" method="post">
+            <h2><center>Cadastro de Clientes DEVs</center></h2>
+            <fieldset>
+                <legend><h3><strong>Informações Pessoais</strong></h3></legend>
+            
+                <!--coleta do nome:-->
+                <label for="nome-cliente"><strong>Nome Completo</strong></label><br>           
+                <input type="text" name="nome-cliente" id="nome-cliente" placeholder="Ex: Carla Álvares de Azevedo" size="40" required><br><br>
+            
+                <!--coleta do e-mail:-->
+                <label for="email-cliente"><strong>Email</strong></label><br>
+                <input type="email" name="email-cliente" id="email-cliente" placeholder="Ex: exemplo@dominio.com" size="40" required><br><br>
+            
+                <!--coleta do sexo:-->
+                <label><strong>Sexo</strong></label><br>
+                <!-- W3C:
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">HTML</label><br>-->
+                <input type="radio" name="sexo-cliente" id="sexo-feminino" value="sexo-feminino" checked>
+                <label for="sexo-feminino">Feminino</label><br>
+                <input type="radio" name="sexo-cliente" id="sexo-masculino" value="sexo-masculino">
+                <label for="sexo-masculino">Masculino</label><br>
+                <input type="radio" name="sexo-cliente" id="sexo-outro" value="sexo-outro">
+                <label for="sexo-outro">Outro</label><br><br>
+                
+                <!--coleta do sexo:-->
+                <label for="data-nascimento-cliente"><strong>Data de Nascimento</strong></label><br>
+                <input type="date" name="data-nascimento-cliente" id="data-nascimento-cliente"><br><br>
+            
+                <!--coleta do estado civil: fonte: W3C-->
+                <label for="estado-civil-cliente"><strong>Estado civil</strong></label><br>
+                <select name="estado-civil-cliente" id="estado-civil-cliente" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="solteiro">Solteira(o)</option>
+                    <option value="casado">Casada(o)</option>
+                    <option value="divorciado">Divorciada(o)</option>
+                    <option value="viuvo">Viúva(o)</option>
+                </select><br><br><br>
+            
+                <!--Coleta do endereço: rua, número, complemento, CEP, cidade, UF -->
+                <label><strong>Endereço</strong></label><br><br>                                            
+                <!--UF: -->
+                <label for="uf-cliente">Unidade Federativa:</label><br>
+                <select name="uf-cliente" id="uf-cliente" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="acre">Acre</option>
+                    <option value="alagoas">Alagoas</option>
+                    <option value="amapa">Amapá</option>
+                    <option value="amazonas">Amazonas</option>
+                    <option value="bahia">Bahia</option>
+                    <option value="ceara">Ceará</option>
+                    <option value="distrito-federal">Distrito Federal</option>
+                    <option value="espirito-santo">Espírito Santo</option>
+                    <option value="goias">Goiás</option>
+                    <option value="maranhao">Maranhão</option>
+                    <option value="mato-grosso">Mato Grosso</option>
+                    <option value="mato-grosso-do-sul">Mato Grosso do Sul</option>
+                    <option value="minas-gerais">Minas Gerais</option>
+                    <option value="para">Pará</option>
+                    <option value="paraiba">Paraíba</option>
+                    <option value="parana">Paraná</option>
+                    <option value="pernambuco">Pernambuco</option>
+                    <option value="piaui">Piauí</option>
+                    <option value="rio-de-janeiro">Rio de Janeiro</option>
+                    <option value="rio-grande-do-norte">Rio Grande do Norte</option>
+                    <option value="rio-grande-do-sul">Rio Grande do Sul</option>
+                    <option value="rondonia">Rondônia</option>
+                    <option value="roraima">Roraima</option>
+                    <option value="santa-catarina">Santa Catarina</option>
+                    <option value="Sao-paulo">São Paulo</option>
+                    <option value="sergipe">Sergipe</option>
+                    <option value="tocantins">Tocantins</option>
+                </select><br><br>
+                
+                <!--CEP: -->
+                <label for="cep-cliente">CEP:</label><br>
+                <input type="text" name="cep-cliente" id="cep-cliente" placeholder="Ex: 00000-000" size="40" required><br><br>
+                
+                <!--Rua-->
+                <label for="rua-cliente">Rua:</label><br>
+                <input type="text" name="rua-cliente" id="rua-cliente" placeholder="Ex: Trav. Jardim das Rosas" size="40" required><br><br>
+                
+                <!--Número da casa ou semelhante: -->
+                <label for="numero-casa-cliente">Número:</label><br>
+                <input type="text" name="numero-casa-cliente" id="numero-casa-cliente" placeholder="Ex: 967" size="40" required><br><br>
+                
+                <!--Complemento: -->
+                <label for="complemento-cliente">Complemento:</label><br>
+                <input type="text" name="complemento-cliente" id="complemento-cliente" placeholder="Ex: apt. 42" size="40">
+            </fieldset><br>            
+            
+            <fieldset>
+                <legend><h3><strong>Informações Profissionais</strong></h3></legend>
+                
+                <!--Seleção de desenvolvimento-->                               
+                <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
+                <input type="checkbox" name="tecnologia1" id="tecnologia1" value="HTML">
+                <label for="tecnologia1">HTML</label>
+                <input type="checkbox" name="tecnologia2" id="tecnologia2" value="CSS">
+                <label for="tecnologia2">CSS</label>
+                <input type="checkbox" name="tecnologia3" id="tecnologia3" value="JavaScript">
+                <label for="tecnologia3">JavaScript</label>
+                <input type="checkbox" name="tecnologia4" id="tecnologia4" value="PHP">
+                <label for="tecnologia4">PHP</label>
+                <input type="checkbox" name="tecnologia5" id="tecnologia5" value="C#">
+                <label for="tecnologia5">C#</label>
+                <input type="checkbox" name="tecnologia6" id="tecnologia6" value="Python">
+                <label for="tecnologia6">Python</label>
+                <input type="checkbox" name="tecnologia7" id="tecnologia7" value="Java">
+                <label for="tecnologia7">Java</label>
+                <input type="checkbox" name="tecnologia8" id="tecnologia8" value="Outras">
+                <label for="tecnologia8">Outras</label><br><br>
+               
+                <!--Campo para contar experiencia profissional-->
+                <label for="experiencia-profissional"><strong>Exeperiência profissional:</strong></label>
+                <textarea name="experiencia-profissional" id="experiencia-profissional" placeholder="Fale um pouco da sua experiencia profissional" rows="3" required></textarea>                
+            </fieldset><br><br>
+                           
+            <!--Botão de submeter formulário-->
+            <center>
+                <input type="submit" name="submeter" id="submeter" value="SUBMETER FORMULÁRIO">       
+            </center><br>
+        </form>
+    </body>
+</html>        
